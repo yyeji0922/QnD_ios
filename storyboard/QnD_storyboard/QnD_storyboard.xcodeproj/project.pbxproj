@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4404CDE21FF92F2D0006D43A /* MakeSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4404CDE11FF92F2D0006D43A /* MakeSurveyViewController.swift */; };
 		446B339C1FF89903002B239A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446B339B1FF89903002B239A /* AppDelegate.swift */; };
 		446B339E1FF89903002B239A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446B339D1FF89903002B239A /* ViewController.swift */; };
 		446B33A11FF89903002B239A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 446B339F1FF89903002B239A /* Main.storyboard */; };
@@ -14,6 +15,10 @@
 		446B33A61FF89903002B239A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 446B33A41FF89903002B239A /* LaunchScreen.storyboard */; };
 		446B33B11FF89903002B239A /* QnD_storyboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446B33B01FF89903002B239A /* QnD_storyboardTests.swift */; };
 		446B33BC1FF89903002B239A /* QnD_storyboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446B33BB1FF89903002B239A /* QnD_storyboardUITests.swift */; };
+		449B47721FF9390C00F9524F /* SurveyTypeView1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 449B47711FF9390C00F9524F /* SurveyTypeView1.xib */; };
+		449B47761FF9393500F9524F /* SurveyTypeView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 449B47751FF9393500F9524F /* SurveyTypeView2.xib */; };
+		449B47781FF93A6700F9524F /* SurveyTypeView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449B47771FF93A6700F9524F /* SurveyTypeView1.swift */; };
+		449B477A1FF93A8300F9524F /* SurveyTypeView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449B47791FF93A8300F9524F /* SurveyTypeView2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4404CDE11FF92F2D0006D43A /* MakeSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeSurveyViewController.swift; sourceTree = "<group>"; };
 		446B33981FF89903002B239A /* QnD_storyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QnD_storyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		446B339B1FF89903002B239A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		446B339D1FF89903002B239A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +53,10 @@
 		446B33B71FF89903002B239A /* QnD_storyboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QnD_storyboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		446B33BB1FF89903002B239A /* QnD_storyboardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QnD_storyboardUITests.swift; sourceTree = "<group>"; };
 		446B33BD1FF89903002B239A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		449B47711FF9390C00F9524F /* SurveyTypeView1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SurveyTypeView1.xib; sourceTree = "<group>"; };
+		449B47751FF9393500F9524F /* SurveyTypeView2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SurveyTypeView2.xib; sourceTree = "<group>"; };
+		449B47771FF93A6700F9524F /* SurveyTypeView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyTypeView1.swift; sourceTree = "<group>"; };
+		449B47791FF93A8300F9524F /* SurveyTypeView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyTypeView2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +84,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4404CDDF1FF92D4B0006D43A /* MakeSurvey */ = {
+			isa = PBXGroup;
+			children = (
+				4404CDE11FF92F2D0006D43A /* MakeSurveyViewController.swift */,
+				449B47771FF93A6700F9524F /* SurveyTypeView1.swift */,
+				449B47711FF9390C00F9524F /* SurveyTypeView1.xib */,
+				449B47791FF93A8300F9524F /* SurveyTypeView2.swift */,
+				449B47751FF9393500F9524F /* SurveyTypeView2.xib */,
+			);
+			path = MakeSurvey;
+			sourceTree = "<group>";
+		};
 		446B338F1FF89903002B239A = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +119,7 @@
 		446B339A1FF89903002B239A /* QnD_storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				4404CDDF1FF92D4B0006D43A /* MakeSurvey */,
 				446B339B1FF89903002B239A /* AppDelegate.swift */,
 				446B339D1FF89903002B239A /* ViewController.swift */,
 				446B339F1FF89903002B239A /* Main.storyboard */,
@@ -231,6 +254,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				449B47721FF9390C00F9524F /* SurveyTypeView1.xib in Resources */,
+				449B47761FF9393500F9524F /* SurveyTypeView2.xib in Resources */,
 				446B33A61FF89903002B239A /* LaunchScreen.storyboard in Resources */,
 				446B33A31FF89903002B239A /* Assets.xcassets in Resources */,
 				446B33A11FF89903002B239A /* Main.storyboard in Resources */,
@@ -258,8 +283,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				449B47781FF93A6700F9524F /* SurveyTypeView1.swift in Sources */,
 				446B339E1FF89903002B239A /* ViewController.swift in Sources */,
+				449B477A1FF93A8300F9524F /* SurveyTypeView2.swift in Sources */,
 				446B339C1FF89903002B239A /* AppDelegate.swift in Sources */,
+				4404CDE21FF92F2D0006D43A /* MakeSurveyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
