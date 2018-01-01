@@ -1,5 +1,5 @@
 //
-//  SurveyTypeView1.swift
+//  SurveyTypeView4.swift
 //  QnD_storyboard
 //
 //  Created by 정예지 on 2018. 1. 1..
@@ -7,8 +7,11 @@
 
 import UIKit
 
-class SurveyTypeView1: UIView {
+class SurveyTypeView4: UIView {
 
+    class func instanceFromNib() -> UIView {
+        return UINib(nibName: "SurveyTypeView4", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
+    }
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

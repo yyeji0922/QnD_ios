@@ -23,20 +23,20 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="nhj-ev-eV4">
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="nhj-ev-eV4">
                     <rect key="frame" x="16" y="97" width="120" height="117"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <gestureRecognizers/>
                     <connections>
-                        <outletCollection property="gestureRecognizers" destination="oXF-cP-euk" appends="YES" id="uV6-YU-nr4"/>
+                        <outletCollection property="gestureRecognizers" destination="pkG-Bo-457" appends="YES" id="XZb-Np-LB1"/>
                     </connections>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="NFM-E0-ZZz">
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="NFM-E0-ZZz">
                     <rect key="frame" x="192" y="97" width="120" height="117"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <gestureRecognizers/>
                     <connections>
-                        <outletCollection property="gestureRecognizers" destination="zHd-04-8dk" appends="YES" id="VnS-9g-r3n"/>
+                        <outletCollection property="gestureRecognizers" destination="Pvo-Qg-5bS" appends="YES" id="FRh-iU-QxM"/>
                     </connections>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="VS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nES-9T-kb7">
@@ -54,23 +54,23 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.97255784273147583" green="0.97646242380142212" blue="0.97647935152053833" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="ImageA" destination="nhj-ev-eV4" id="5sp-IZ-Iyv"/>
-                <outlet property="ImageB" destination="NFM-E0-ZZz" id="M9g-3i-jWK"/>
+                <outlet property="imageA" destination="nhj-ev-eV4" id="Cab-1T-1lK"/>
+                <outlet property="imageB" destination="NFM-E0-ZZz" id="r4F-GF-QIX"/>
             </connections>
             <point key="canvasLocation" x="3" y="85"/>
         </view>
-        <tapGestureRecognizer id="oXF-cP-euk">
+        <tapGestureRecognizer id="pkG-Bo-457">
             <connections>
-                <action selector="selectImageA:" destination="iN0-l3-epB" id="kaT-Jd-0kg"/>
+                <action selector="changeImageA:" destination="iN0-l3-epB" id="Fie-nl-hjj"/>
             </connections>
         </tapGestureRecognizer>
-        <tapGestureRecognizer id="zHd-04-8dk">
+        <tapGestureRecognizer id="Pvo-Qg-5bS">
             <connections>
-                <action selector="selectImageB:" destination="iN0-l3-epB" id="a01-Hb-LTB"/>
+                <action selector="changeImageB:" destination="iN0-l3-epB" id="B3Z-z7-W2J"/>
             </connections>
         </tapGestureRecognizer>
     </objects>
