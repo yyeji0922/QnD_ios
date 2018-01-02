@@ -9,7 +9,7 @@ import UIKit
 
 class MakeSurveyViewController: UIViewController {
     var selected = "객관식"
-    let answerTypes = ["객관식","A/B","찬/반","직선"]
+    let answerTypes = ["객관식","A/B","찬/반"/*,"직선"*/]
     func test(){
         self.dismiss(animated: true, completion: nil)
     }
@@ -18,9 +18,11 @@ class MakeSurveyViewController: UIViewController {
     @IBOutlet weak var subView: UIView!
     @IBAction func makeBtn(_ sender: Any) {
         // 다음페이지로 넘어가기
+        print(selected)//selected를 넘겨 줘야겠지
+        
         performSegue(withIdentifier: "toMoreMakeSurvey", sender: makeBtn)
     }
-    
+    /*
     func pickImage(){
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
             let picker = UIImagePickerController()
@@ -31,7 +33,7 @@ class MakeSurveyViewController: UIViewController {
         }
         print(selected)
     }
-    
+    */
     override func viewDidLoad() {
         super.viewDidLoad()
         answerTypePicker.dataSource = self
@@ -76,12 +78,12 @@ extension MakeSurveyViewController : UIPickerViewDelegate, UIPickerViewDataSourc
             let sideView = SurveyTypeView3.instanceFromNib()
             setSideView(sideView: sideView)
             break
-        case
+        /*case
             "직선" :
             let sideView = SurveyTypeView4.instanceFromNib()
             setSideView(sideView: sideView)
             break
-
+             */
         default:
             print("error has occured")
             break
@@ -89,23 +91,6 @@ extension MakeSurveyViewController : UIPickerViewDelegate, UIPickerViewDataSourc
     }
 }
 
-extension MakeSurveyViewController:UINavigationControllerDelegate, UIImagePickerControllerDelegate{
-    
-    //MARK: UIImagePickerDelegate Methods
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let originalImage = info[UIImagePickerControllerOriginalImage] as? UIImage{
-            //self.profileImageView.image = originalImage
-        }
-        
-        dismiss(animated: true, completion: nil)
-    }
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    
-    
-}
+
 
 
