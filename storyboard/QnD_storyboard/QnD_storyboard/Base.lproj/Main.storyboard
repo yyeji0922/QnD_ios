@@ -24,11 +24,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-201" y="-137"/>
         </scene>
         <!--설문-->
         <scene sceneID="OO9-Rm-QC7">
             <objects>
-                <viewController id="08o-Eg-mIW" sceneMemberID="viewController">
+                <viewController id="08o-Eg-mIW" customClass="SurveyListViewController" customModule="QnD_storyboard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bKO-a8-xlQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,10 +64,40 @@
                         <viewLayoutGuide key="safeArea" id="gRR-tD-dj4"/>
                     </view>
                     <navigationItem key="navigationItem" title="설문" id="M6T-NM-pHu"/>
+                    <connections>
+                        <outlet property="surveyListTable" destination="AXI-6U-OZS" id="O4h-UK-GXF"/>
+                        <segue destination="IdQ-RM-NeQ" kind="push" identifier="toDoSurvey" id="hJI-s8-tKg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UoV-JS-ezN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1789.5999999999999" y="947.67616191904051"/>
+        </scene>
+        <!--Do Survey View Controller-->
+        <scene sceneID="WcZ-Jv-ZUK">
+            <objects>
+                <viewController id="IdQ-RM-NeQ" customClass="DoSurveyViewController" customModule="QnD_storyboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uMU-IK-cTf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KFH-SJ-oXD">
+                                <rect key="frame" x="16" y="69" width="343" height="528"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="vWi-c4-iq7"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UM1-Id-Xrd"/>
+                    <connections>
+                        <outlet property="subView" destination="KFH-SJ-oXD" id="pyk-kN-3Ol"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XP1-kP-9QL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2554.4000000000001" y="950.37481259370327"/>
         </scene>
         <!--등록-->
         <scene sceneID="Rud-Td-6RA">
@@ -77,16 +108,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTC-MQ-Jeo">
-                                <rect key="frame" x="60" y="141" width="42" height="21"/>
+                                <rect key="frame" x="60" y="115" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="답변유형" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYB-qy-Nh7">
-                                <rect key="frame" x="60" y="193" width="65" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -102,45 +126,63 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wOJ-tq-UDF">
-                                <rect key="frame" x="195" y="169" width="150" height="69"/>
+                                <rect key="frame" x="195" y="179" width="150" height="69"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFx-3M-Rex">
-                                <rect key="frame" x="60" y="564" width="269" height="30"/>
-                                <color key="backgroundColor" red="0.58733594417572021" green="0.73741608858108521" blue="0.98042947053909302" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="만들기">
-                                    <color key="titleColor" red="0.99998790029999995" green="0.9999936223" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <action selector="makeBtn:" destination="sDh-fD-yap" eventType="touchUpInside" id="gnu-cT-kW7"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lMn-AB-qbx">
                                 <rect key="frame" x="26" y="280" width="333" height="276"/>
                                 <color key="backgroundColor" red="0.9843018651008606" green="0.98430746793746948" blue="0.98432248830795288" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="lMn-AB-qbx" secondAttribute="height" multiplier="111:92" id="jy6-CS-ihQ"/>
                                 </constraints>
                             </view>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i7v-r2-S68">
+                                <rect key="frame" x="44" y="144" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sSb-3b-FLZ">
+                                <rect key="frame" x="149" y="141" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="답변유형" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYB-qy-Nh7">
+                                <rect key="frame" x="60" y="203" width="65" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.9843018651008606" green="0.98430746793746948" blue="0.98432248830795288" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="20T-SC-4iW" firstAttribute="trailing" secondItem="lMn-AB-qbx" secondAttribute="trailing" constant="16" id="O7C-Kj-j3y"/>
-                            <constraint firstItem="OFx-3M-Rex" firstAttribute="top" secondItem="lMn-AB-qbx" secondAttribute="bottom" constant="8" id="iRl-mA-k8W"/>
                             <constraint firstItem="20T-SC-4iW" firstAttribute="bottom" secondItem="lMn-AB-qbx" secondAttribute="bottom" constant="62" id="k2p-Sq-E06"/>
                             <constraint firstItem="lMn-AB-qbx" firstAttribute="leading" secondItem="20T-SC-4iW" secondAttribute="leading" constant="26" id="qZQ-q0-lco"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="20T-SC-4iW"/>
                     </view>
-                    <navigationItem key="navigationItem" title="등록" id="pkz-ws-uYj"/>
+                    <navigationItem key="navigationItem" title="등록" id="pkz-ws-uYj">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="mY0-8M-pyO">
+                            <connections>
+                                <action selector="makeBtn:" destination="sDh-fD-yap" id="znH-ez-Csb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="answerTypePicker" destination="wOJ-tq-UDF" id="fWc-BU-UQy"/>
-                        <outlet property="makeBtn" destination="OFx-3M-Rex" id="fq3-SE-sdF"/>
+                        <outlet property="makeBtn" destination="mY0-8M-pyO" id="hMC-sf-pnK"/>
                         <outlet property="subView" destination="lMn-AB-qbx" id="Zst-xN-xDw"/>
                         <segue destination="rfd-9r-XDl" kind="push" identifier="toMoreMakeSurvey" id="z0U-XG-ZY5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ema-xV-kZu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="aHP-Sj-Pql"/>
             </objects>
             <point key="canvasLocation" x="1789.5999999999999" y="1745.577211394303"/>
         </scene>

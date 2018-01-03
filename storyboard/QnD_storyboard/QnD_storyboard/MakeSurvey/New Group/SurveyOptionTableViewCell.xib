@@ -33,7 +33,7 @@
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                         <connections>
-                            <action selector="optionField:" destination="-1" eventType="editingDidEnd" id="GZt-da-aki"/>
+                            <action selector="editedOptionField:" destination="-1" eventType="editingDidEnd" id="2Fe-C7-w52"/>
                         </connections>
                     </textField>
                 </subviews>

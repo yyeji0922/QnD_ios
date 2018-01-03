@@ -8,10 +8,11 @@
 import UIKit
 
 class checklistBtn : UIButton{
-    var image1 = UIImage(named: "test")
-    var image2 = UIImage(named: "test2")
+    var image1 = UIImage(named: "test2")
+    var image2 = UIImage(named: "test")
     var stateofBtn : Int = 0
-    
+    var opt : Bool = false
+    var firstornot : Bool = true
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -24,11 +25,11 @@ class checklistBtn : UIButton{
     func changeState(){
         if(stateofBtn == 0){
             self.stateofBtn = 1
-            self.setImage( image1, for: UIControlState.normal)
+            self.setImage( image2, for: UIControlState.normal)
         }
         else {
             self.stateofBtn = 0
-            self.setImage( image2, for: UIControlState.normal)
+            self.setImage( image1, for: UIControlState.normal)
         }
     }
     

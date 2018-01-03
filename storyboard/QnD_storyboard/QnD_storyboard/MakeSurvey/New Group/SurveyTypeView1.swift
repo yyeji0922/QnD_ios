@@ -8,27 +8,27 @@
 import UIKit
 
 class SurveyTypeView1: UIView {
-    
+    var surveydata = SurveyType1()
     //MARK :- checklist
-    var multiplestate = 0
+    var multiplestate = false
     @IBOutlet weak var multipleselectionBtn: UIButton!
     @IBAction func multipleselctionBtn(_ sender: Any) {
-        if(multiplestate == 0){
-            self.multiplestate = 1
+        if(multiplestate == false){
+            self.multiplestate = true
             multipleselectionBtn.setImage(#imageLiteral(resourceName: "test"), for: UIControlState.normal)
         }
         else {
-            self.multiplestate = 0
+            self.multiplestate = false
             multipleselectionBtn.setImage(#imageLiteral(resourceName: "test2"), for: UIControlState.normal)
         }
     }
     
     
     //MARK :- Table
-    var count = 2
     @IBOutlet weak var optionTable: UITableView!
     @IBAction func addBtn(_ sender: Any) {
-        count += 1
+        surveydata.count += 1
+        surveydata.options.append("")
         optionTable.reloadData()
     }
     @IBOutlet weak var addBtn: UIButton!
@@ -49,7 +49,7 @@ class SurveyTypeView1: UIView {
 extension SurveyTypeView1 : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return count
+        return surveydata.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

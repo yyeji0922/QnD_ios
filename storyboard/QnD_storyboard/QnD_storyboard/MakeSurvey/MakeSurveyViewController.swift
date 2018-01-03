@@ -8,36 +8,42 @@
 import UIKit
 
 class MakeSurveyViewController: UIViewController {
-    var selected = "객관식"
-    let answerTypes = ["객관식","A/B","찬/반"/*,"직선"*/]
+    var selected = 0
+    let answerTypes = [0,1,2]
     func test(){
         self.dismiss(animated: true, completion: nil)
     }
-    @IBOutlet weak var makeBtn: UIButton!
-    @IBOutlet weak var answerTypePicker: UIPickerView!
-    @IBOutlet weak var subView: UIView!
-    @IBAction func makeBtn(_ sender: Any) {
-        // 다음페이지로 넘어가기
-        print(selected)//selected를 넘겨 줘야겠지
-        
+    @IBAction func makeBtn(_ sender: Any) {        print(selected)//selected를 넘겨 줘야겠지
         performSegue(withIdentifier: "toMoreMakeSurvey", sender: makeBtn)
     }
-    /*
-    func pickImage(){
-        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
-            let picker = UIImagePickerController()
-            picker.delegate = self
-            picker.allowsEditing = false
-            picker.sourceType = .photoLibrary
-            present(picker, animated: true, completion: nil)
+    @IBOutlet weak var makeBtn: UIBarButtonItem!
+    @IBOutlet weak var answerTypePicker: UIPickerView!
+    @IBOutlet weak var subView: UIView!
+    
+    
+    @objc func getSwipeAction( _ recognizer : UISwipeGestureRecognizer){
+        if recognizer.direction == .right{
+            selected = ( selected + 1 ) % 3
+            chooseSurveyType()
+            print("Right Swiped")
+        } else if recognizer.direction == .left {
+            selected = ( selected - 1 ) % 3
+            chooseSurveyType()
+            print("Left Swiped")
         }
-        print(selected)
+        
     }
-    */
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         answerTypePicker.dataSource = self
         answerTypePicker.delegate = self
+        subView.isUserInteractionEnabled = true
+        let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(getSwipeAction))
+        self.subView.addGestureRecognizer(swipeGesture)
+        chooseSurveyType()
         // Do any additional setup after loading the view.
     }
 
@@ -61,29 +67,23 @@ extension MakeSurveyViewController : UIPickerViewDelegate, UIPickerViewDataSourc
         chooseSurveyType()
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return answerTypes[row]
+        return String(answerTypes[row])
     }
     
     func chooseSurveyType(){
         switch selected {
-        case "객관식" :
+        case 0 :
             let sideView = SurveyTypeView1.instanceFromNib()
             setSideView(sideView: sideView)
             break
-        case "A/B" :
+        case 1 :
             let sideView = SurveyTypeView2.instanceFromNib()
             setSideView(sideView: sideView)
             break
-        case "찬/반" :
+        case 2 :
             let sideView = SurveyTypeView3.instanceFromNib()
             setSideView(sideView: sideView)
             break
-        /*case
-            "직선" :
-            let sideView = SurveyTypeView4.instanceFromNib()
-            setSideView(sideView: sideView)
-            break
-             */
         default:
             print("error has occured")
             break
