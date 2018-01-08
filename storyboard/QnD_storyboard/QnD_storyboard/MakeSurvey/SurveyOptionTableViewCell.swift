@@ -9,22 +9,39 @@ import UIKit
 
 class SurveyOptionTableViewCell: UITableViewCell {
     var row = 0
-    @IBOutlet weak var numLabel: UILabel!
     @IBOutlet weak var optionField: UITextField!
     
-    @IBAction func editedOptionField(_ sender: Any) {
-        let t = SurveyTypeView1()
-        t.surveydata.options[row] = optionField.text!
-        
-    }
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         // Initialization code
     }
 
+    override func layoutSubviews() {
+        
+        self.optionField.delegate = self
+        self.optionField.returnKeyType = .done
+        self.optionField.endEditing(true)
+        // you can update your label's text or etc.
+    }
+    
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }
     
 }
+
+
+extension SurveyOptionTableViewCell : UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.optionField.endEditing(true)
+        return false
+    }
+}
+
+

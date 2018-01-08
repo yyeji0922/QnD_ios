@@ -1,39 +1,31 @@
 //
-//  DoSurveyTypeView1.swift
+//  DoSurveyViewController1.swift
 //  QnD_storyboard
 //
-//  Created by 정예지 on 2018. 1. 2..
+//  Created by 정예지 on 2018. 1. 5..
 //
 
 import UIKit
 
-class DoSurveyTypeView1: UIViewController {
-    var startTime = CFAbsoluteTimeGetCurrent()
-    var endTime = CFAbsoluteTimeGetCurrent()
+class DoSurveyViewController1: UIViewController {
+    var options =  ["", "", "",""]
     
-    var options = ["option1", "option2"]
-    
-    @IBOutlet weak var titleLabel: UILabel!
-    class func instanceFromNib() -> UIView {
-        return UINib(nibName: "DoSurveyTypeView1", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
-    }
-    @IBAction func cancelBtn(_ sender: Any) {
-    }
     @IBOutlet weak var optionTable: UITableView!
+    @IBOutlet weak var multipleSwitch: UISwitch!
     
-/*
-    override func layoutSubviews() {
-        
+    override func viewDidLoad() {
+        super.viewDidLoad()
         optionTable.delegate = self
         optionTable.dataSource = self
-        var startTime = CFAbsoluteTimeGetCurrent()
-        // you can update your label's text or etc.
+        // Do any additional setup after loading the view.
     }
-*/
+    
+
+    
 
 }
 
-extension DoSurveyTypeView1 : UITableViewDataSource, UITableViewDelegate {
+extension DoSurveyViewController1 : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return options.count
     }

@@ -8,21 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		4404CDE21FF92F2D0006D43A /* MakeSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4404CDE11FF92F2D0006D43A /* MakeSurveyViewController.swift */; };
+		441A258B1FFFA28C0038ADE2 /* MakeSurveyViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441A258A1FFFA28C0038ADE2 /* MakeSurveyViewController1.swift */; };
+		441A258E1FFFA5BD0038ADE2 /* MakeSurveyViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441A258D1FFFA5BD0038ADE2 /* MakeSurveyViewController2.swift */; };
+		441A25901FFFB8E60038ADE2 /* MakeSurveyViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441A258F1FFFB8E60038ADE2 /* MakeSurveyViewController3.swift */; };
 		442BE26B1FFBAF59005EA1F2 /* DoSurveyTypeView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442BE26A1FFBAF59005EA1F2 /* DoSurveyTypeView2.swift */; };
 		442FD95E1FFA225F00268FD2 /* MakeMoreSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442FD95D1FFA225F00268FD2 /* MakeMoreSurveyViewController.swift */; };
+		444397531FFE908C00AD5D55 /* SearchSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444397521FFE908C00AD5D55 /* SearchSurveyViewController.swift */; };
+		444397581FFE999B00AD5D55 /* DoneSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444397571FFE999B00AD5D55 /* DoneSurveyViewController.swift */; };
+		4443975A1FFEB56900AD5D55 /* DoSurveyContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444397591FFEB56900AD5D55 /* DoSurveyContainerViewController.swift */; };
+		4443975C1FFEBA7300AD5D55 /* DoneSurveyContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4443975B1FFEBA7300AD5D55 /* DoneSurveyContainerViewController.swift */; };
+		4443975E1FFECFE700AD5D55 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4443975D1FFECFE700AD5D55 /* PickerViewController.swift */; };
 		446B339C1FF89903002B239A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446B339B1FF89903002B239A /* AppDelegate.swift */; };
-		446B339E1FF89903002B239A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446B339D1FF89903002B239A /* ViewController.swift */; };
 		446B33A11FF89903002B239A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 446B339F1FF89903002B239A /* Main.storyboard */; };
 		446B33A31FF89903002B239A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 446B33A21FF89903002B239A /* Assets.xcassets */; };
 		446B33A61FF89903002B239A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 446B33A41FF89903002B239A /* LaunchScreen.storyboard */; };
 		446B33B11FF89903002B239A /* QnD_storyboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446B33B01FF89903002B239A /* QnD_storyboardTests.swift */; };
 		446B33BC1FF89903002B239A /* QnD_storyboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446B33BB1FF89903002B239A /* QnD_storyboardUITests.swift */; };
+		447828331FFD24920070B9A0 /* hashtag.xib in Resources */ = {isa = PBXBuildFile; fileRef = 447828321FFD24920070B9A0 /* hashtag.xib */; };
+		447828351FFD24A60070B9A0 /* hashtag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447828341FFD24A60070B9A0 /* hashtag.swift */; };
 		4486B8A51FFB7F270023BDB0 /* SurveyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4486B8A41FFB7F270023BDB0 /* SurveyListViewController.swift */; };
 		4486B8AC1FFB85080023BDB0 /* SurveyListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4486B8AA1FFB85080023BDB0 /* SurveyListTableViewCell.swift */; };
 		4486B8AD1FFB85080023BDB0 /* SurveyListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4486B8AB1FFB85080023BDB0 /* SurveyListTableViewCell.xib */; };
 		4486B8B01FFB86070023BDB0 /* DoSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4486B8AF1FFB86070023BDB0 /* DoSurveyViewController.swift */; };
 		4486B8B51FFB874E0023BDB0 /* DoSurveyTypeView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4486B8B41FFB874E0023BDB0 /* DoSurveyTypeView1.swift */; };
-		4486B8B71FFB87650023BDB0 /* DoSurveyTypeView1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4486B8B61FFB87650023BDB0 /* DoSurveyTypeView1.xib */; };
 		4486B8BB1FFB886E0023BDB0 /* DoSurveyTypeView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4486B8BA1FFB886E0023BDB0 /* DoSurveyTypeView2.xib */; };
 		4486B8BD1FFB88790023BDB0 /* DoSurveyTypeView3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4486B8BC1FFB88790023BDB0 /* DoSurveyTypeView3.xib */; };
 		4486B8BF1FFB88860023BDB0 /* DoSurveyTypeView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4486B8BE1FFB88860023BDB0 /* DoSurveyTypeView3.swift */; };
@@ -34,10 +42,12 @@
 		449B477A1FF93A8300F9524F /* SurveyTypeView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449B47791FF93A8300F9524F /* SurveyTypeView2.swift */; };
 		44A50AF01FFA7B0F00C1A098 /* SurveyTypeView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A50AEF1FFA7B0F00C1A098 /* SurveyTypeView1.swift */; };
 		44A50AF41FFA7BD600C1A098 /* SurveyTypeView1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44A50AF31FFA7BD600C1A098 /* SurveyTypeView1.xib */; };
-		44A50AF81FFA7EE900C1A098 /* checklistBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A50AF71FFA7EE900C1A098 /* checklistBtn.swift */; };
+		44A50AF81FFA7EE900C1A098 /* additionalfunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A50AF71FFA7EE900C1A098 /* additionalfunc.swift */; };
 		44A50B011FFA99E800C1A098 /* SurveyOptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A50AFF1FFA99E800C1A098 /* SurveyOptionTableViewCell.swift */; };
 		44A50B021FFA99E800C1A098 /* SurveyOptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44A50B001FFA99E800C1A098 /* SurveyOptionTableViewCell.xib */; };
 		44A50B051FFA9F9400C1A098 /* SurveyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A50B041FFA9F9400C1A098 /* SurveyType.swift */; };
+		44AAFE872000B18E0038275A /* MakeSurveyContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AAFE862000B18E0038275A /* MakeSurveyContainerViewController.swift */; };
+		44AE94CB1FFF959900F70221 /* DoSurveyViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AE94CA1FFF959900F70221 /* DoSurveyViewController1.swift */; };
 		44B7EE9B1FF9FB8300D36D9F /* SurveyTypeView3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44B7EE9A1FF9FB8300D36D9F /* SurveyTypeView3.xib */; };
 		44B7EE9D1FF9FB9B00D36D9F /* SurveyTypeView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7EE9C1FF9FB9B00D36D9F /* SurveyTypeView3.swift */; };
 		44C762051FFB9A0400834B51 /* ResultSurveyTypeView1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44C762041FFB9A0400834B51 /* ResultSurveyTypeView1.xib */; };
@@ -67,11 +77,18 @@
 
 /* Begin PBXFileReference section */
 		4404CDE11FF92F2D0006D43A /* MakeSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeSurveyViewController.swift; sourceTree = "<group>"; };
+		441A258A1FFFA28C0038ADE2 /* MakeSurveyViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MakeSurveyViewController1.swift; path = QnD_storyboard/SurveyViewController/MakeSurvey/MakeSurveyViewController1.swift; sourceTree = SOURCE_ROOT; };
+		441A258D1FFFA5BD0038ADE2 /* MakeSurveyViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeSurveyViewController2.swift; sourceTree = "<group>"; };
+		441A258F1FFFB8E60038ADE2 /* MakeSurveyViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MakeSurveyViewController3.swift; path = QnD_storyboard/SurveyViewController/MakeSurvey/MakeSurveyViewController3.swift; sourceTree = SOURCE_ROOT; };
 		442BE26A1FFBAF59005EA1F2 /* DoSurveyTypeView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoSurveyTypeView2.swift; sourceTree = "<group>"; };
 		442FD95D1FFA225F00268FD2 /* MakeMoreSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeMoreSurveyViewController.swift; sourceTree = "<group>"; };
+		444397521FFE908C00AD5D55 /* SearchSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSurveyViewController.swift; sourceTree = "<group>"; };
+		444397571FFE999B00AD5D55 /* DoneSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneSurveyViewController.swift; sourceTree = "<group>"; };
+		444397591FFEB56900AD5D55 /* DoSurveyContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoSurveyContainerViewController.swift; sourceTree = "<group>"; };
+		4443975B1FFEBA7300AD5D55 /* DoneSurveyContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneSurveyContainerViewController.swift; sourceTree = "<group>"; };
+		4443975D1FFECFE700AD5D55 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		446B33981FF89903002B239A /* QnD_storyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QnD_storyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		446B339B1FF89903002B239A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		446B339D1FF89903002B239A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		446B33A01FF89903002B239A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		446B33A21FF89903002B239A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		446B33A51FF89903002B239A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -82,12 +99,13 @@
 		446B33B71FF89903002B239A /* QnD_storyboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QnD_storyboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		446B33BB1FF89903002B239A /* QnD_storyboardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QnD_storyboardUITests.swift; sourceTree = "<group>"; };
 		446B33BD1FF89903002B239A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		447828321FFD24920070B9A0 /* hashtag.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = hashtag.xib; sourceTree = "<group>"; };
+		447828341FFD24A60070B9A0 /* hashtag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hashtag.swift; sourceTree = "<group>"; };
 		4486B8A41FFB7F270023BDB0 /* SurveyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListViewController.swift; sourceTree = "<group>"; };
 		4486B8AA1FFB85080023BDB0 /* SurveyListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListTableViewCell.swift; sourceTree = "<group>"; };
 		4486B8AB1FFB85080023BDB0 /* SurveyListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SurveyListTableViewCell.xib; sourceTree = "<group>"; };
 		4486B8AF1FFB86070023BDB0 /* DoSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoSurveyViewController.swift; sourceTree = "<group>"; };
 		4486B8B41FFB874E0023BDB0 /* DoSurveyTypeView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoSurveyTypeView1.swift; sourceTree = "<group>"; };
-		4486B8B61FFB87650023BDB0 /* DoSurveyTypeView1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoSurveyTypeView1.xib; sourceTree = "<group>"; };
 		4486B8BA1FFB886E0023BDB0 /* DoSurveyTypeView2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoSurveyTypeView2.xib; sourceTree = "<group>"; };
 		4486B8BC1FFB88790023BDB0 /* DoSurveyTypeView3.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoSurveyTypeView3.xib; sourceTree = "<group>"; };
 		4486B8BE1FFB88860023BDB0 /* DoSurveyTypeView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoSurveyTypeView3.swift; sourceTree = "<group>"; };
@@ -99,10 +117,12 @@
 		449B47791FF93A8300F9524F /* SurveyTypeView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyTypeView2.swift; sourceTree = "<group>"; };
 		44A50AEF1FFA7B0F00C1A098 /* SurveyTypeView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyTypeView1.swift; sourceTree = "<group>"; };
 		44A50AF31FFA7BD600C1A098 /* SurveyTypeView1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SurveyTypeView1.xib; sourceTree = "<group>"; };
-		44A50AF71FFA7EE900C1A098 /* checklistBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checklistBtn.swift; sourceTree = "<group>"; };
+		44A50AF71FFA7EE900C1A098 /* additionalfunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = additionalfunc.swift; sourceTree = "<group>"; };
 		44A50AFF1FFA99E800C1A098 /* SurveyOptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyOptionTableViewCell.swift; sourceTree = "<group>"; };
 		44A50B001FFA99E800C1A098 /* SurveyOptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SurveyOptionTableViewCell.xib; sourceTree = "<group>"; };
 		44A50B041FFA9F9400C1A098 /* SurveyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyType.swift; sourceTree = "<group>"; };
+		44AAFE862000B18E0038275A /* MakeSurveyContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeSurveyContainerViewController.swift; sourceTree = "<group>"; };
+		44AE94CA1FFF959900F70221 /* DoSurveyViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoSurveyViewController1.swift; sourceTree = "<group>"; };
 		44B7EE9A1FF9FB8300D36D9F /* SurveyTypeView3.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SurveyTypeView3.xib; sourceTree = "<group>"; };
 		44B7EE9C1FF9FB9B00D36D9F /* SurveyTypeView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyTypeView3.swift; sourceTree = "<group>"; };
 		44C762041FFB9A0400834B51 /* ResultSurveyTypeView1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultSurveyTypeView1.xib; sourceTree = "<group>"; };
@@ -142,10 +162,22 @@
 			isa = PBXGroup;
 			children = (
 				4404CDE11FF92F2D0006D43A /* MakeSurveyViewController.swift */,
+				44AAFE862000B18E0038275A /* MakeSurveyContainerViewController.swift */,
+				44A50AFF1FFA99E800C1A098 /* SurveyOptionTableViewCell.swift */,
+				44A50B001FFA99E800C1A098 /* SurveyOptionTableViewCell.xib */,
 				442FD95D1FFA225F00268FD2 /* MakeMoreSurveyViewController.swift */,
-				44A50AEC1FFA7ABE00C1A098 /* MakeType1 */,
-				442FD9671FFA315700268FD2 /* MakeType2 */,
-				442FD9691FFA316600268FD2 /* MakeType3 */,
+				4443975D1FFECFE700AD5D55 /* PickerViewController.swift */,
+				444397561FFE994300AD5D55 /* MakeType */,
+			);
+			path = MakeSurvey;
+			sourceTree = "<group>";
+		};
+		441A258C1FFFA4790038ADE2 /* MakeSurvey */ = {
+			isa = PBXGroup;
+			children = (
+				441A258A1FFFA28C0038ADE2 /* MakeSurveyViewController1.swift */,
+				441A258D1FFFA5BD0038ADE2 /* MakeSurveyViewController2.swift */,
+				441A258F1FFFB8E60038ADE2 /* MakeSurveyViewController3.swift */,
 			);
 			path = MakeSurvey;
 			sourceTree = "<group>";
@@ -166,6 +198,25 @@
 				44B7EE9A1FF9FB8300D36D9F /* SurveyTypeView3.xib */,
 			);
 			path = MakeType3;
+			sourceTree = "<group>";
+		};
+		444397511FFE906D00AD5D55 /* SearchSurvey */ = {
+			isa = PBXGroup;
+			children = (
+				444397521FFE908C00AD5D55 /* SearchSurveyViewController.swift */,
+				444397571FFE999B00AD5D55 /* DoneSurveyViewController.swift */,
+			);
+			path = SearchSurvey;
+			sourceTree = "<group>";
+		};
+		444397561FFE994300AD5D55 /* MakeType */ = {
+			isa = PBXGroup;
+			children = (
+				44A50AEC1FFA7ABE00C1A098 /* MakeType1 */,
+				442FD9671FFA315700268FD2 /* MakeType2 */,
+				442FD9691FFA316600268FD2 /* MakeType3 */,
+			);
+			path = MakeType;
 			sourceTree = "<group>";
 		};
 		446B338F1FF89903002B239A = {
@@ -191,12 +242,14 @@
 		446B339A1FF89903002B239A /* QnD_storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				44A50AF71FFA7EE900C1A098 /* checklistBtn.swift */,
+				44AE94C91FFF956700F70221 /* SurveyViewController */,
+				44A50AF71FFA7EE900C1A098 /* additionalfunc.swift */,
+				4478282D1FFD24220070B9A0 /* Hashtag */,
 				44A50B031FFA9F7200C1A098 /* Model */,
 				4486B8A31FFB7EF70023BDB0 /* DoSurvey */,
 				4404CDDF1FF92D4B0006D43A /* MakeSurvey */,
+				444397511FFE906D00AD5D55 /* SearchSurvey */,
 				446B339B1FF89903002B239A /* AppDelegate.swift */,
-				446B339D1FF89903002B239A /* ViewController.swift */,
 				446B339F1FF89903002B239A /* Main.storyboard */,
 				446B33A21FF89903002B239A /* Assets.xcassets */,
 				446B33A41FF89903002B239A /* LaunchScreen.storyboard */,
@@ -223,11 +276,22 @@
 			path = QnD_storyboardUITests;
 			sourceTree = "<group>";
 		};
+		4478282D1FFD24220070B9A0 /* Hashtag */ = {
+			isa = PBXGroup;
+			children = (
+				447828321FFD24920070B9A0 /* hashtag.xib */,
+				447828341FFD24A60070B9A0 /* hashtag.swift */,
+			);
+			path = Hashtag;
+			sourceTree = "<group>";
+		};
 		4486B8A31FFB7EF70023BDB0 /* DoSurvey */ = {
 			isa = PBXGroup;
 			children = (
-				4486B8C01FFB88A90023BDB0 /* SurveyList */,
 				4486B8AF1FFB86070023BDB0 /* DoSurveyViewController.swift */,
+				444397591FFEB56900AD5D55 /* DoSurveyContainerViewController.swift */,
+				4443975B1FFEBA7300AD5D55 /* DoneSurveyContainerViewController.swift */,
+				4486B8C01FFB88A90023BDB0 /* SurveyList */,
 				4486B8C51FFB8DF90023BDB0 /* SurveyDone */,
 				44C762101FFB9C5D00834B51 /* DoType */,
 				44C762111FFB9C6700834B51 /* ResultType */,
@@ -239,9 +303,6 @@
 			isa = PBXGroup;
 			children = (
 				4486B8B41FFB874E0023BDB0 /* DoSurveyTypeView1.swift */,
-				4486B8B61FFB87650023BDB0 /* DoSurveyTypeView1.xib */,
-				4486B8C11FFB8A7D0023BDB0 /* DoSurveyOptionTableViewCell.swift */,
-				4486B8C21FFB8A7D0023BDB0 /* DoSurveyOptionTableViewCell.xib */,
 			);
 			path = DoType1;
 			sourceTree = "<group>";
@@ -288,8 +349,6 @@
 			children = (
 				44A50AEF1FFA7B0F00C1A098 /* SurveyTypeView1.swift */,
 				44A50AF31FFA7BD600C1A098 /* SurveyTypeView1.xib */,
-				44A50AFF1FFA99E800C1A098 /* SurveyOptionTableViewCell.swift */,
-				44A50B001FFA99E800C1A098 /* SurveyOptionTableViewCell.xib */,
 			);
 			name = MakeType1;
 			path = "New Group";
@@ -301,6 +360,17 @@
 				44A50B041FFA9F9400C1A098 /* SurveyType.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		44AE94C91FFF956700F70221 /* SurveyViewController */ = {
+			isa = PBXGroup;
+			children = (
+				441A258C1FFFA4790038ADE2 /* MakeSurvey */,
+				44AE94CA1FFF959900F70221 /* DoSurveyViewController1.swift */,
+				4486B8C11FFB8A7D0023BDB0 /* DoSurveyOptionTableViewCell.swift */,
+				4486B8C21FFB8A7D0023BDB0 /* DoSurveyOptionTableViewCell.xib */,
+			);
+			path = SurveyViewController;
 			sourceTree = "<group>";
 		};
 		44C762011FFB99AD00834B51 /* ResultType1 */ = {
@@ -462,9 +532,9 @@
 				44B7EE9B1FF9FB8300D36D9F /* SurveyTypeView3.xib in Resources */,
 				4486B8BB1FFB886E0023BDB0 /* DoSurveyTypeView2.xib in Resources */,
 				4486B8C41FFB8A7D0023BDB0 /* DoSurveyOptionTableViewCell.xib in Resources */,
-				4486B8B71FFB87650023BDB0 /* DoSurveyTypeView1.xib in Resources */,
 				44C7620D1FFB9A2A00834B51 /* ResultSurveyTypeView3.xib in Resources */,
 				4486B8C91FFB8E1E0023BDB0 /* SurveyDoneView.xib in Resources */,
+				447828331FFD24920070B9A0 /* hashtag.xib in Resources */,
 				449B47761FF9393500F9524F /* SurveyTypeView2.xib in Resources */,
 				44C7620B1FFB9A2000834B51 /* ResultSurveyTypeView2.xib in Resources */,
 				446B33A61FF89903002B239A /* LaunchScreen.storyboard in Resources */,
@@ -498,24 +568,34 @@
 			files = (
 				44C762071FFB9A0F00834B51 /* ResultSurveyTypeView1.swift in Sources */,
 				442FD95E1FFA225F00268FD2 /* MakeMoreSurveyViewController.swift in Sources */,
-				446B339E1FF89903002B239A /* ViewController.swift in Sources */,
 				4486B8BF1FFB88860023BDB0 /* DoSurveyTypeView3.swift in Sources */,
+				44AE94CB1FFF959900F70221 /* DoSurveyViewController1.swift in Sources */,
 				4486B8A51FFB7F270023BDB0 /* SurveyListViewController.swift in Sources */,
 				4486B8B51FFB874E0023BDB0 /* DoSurveyTypeView1.swift in Sources */,
+				441A258B1FFFA28C0038ADE2 /* MakeSurveyViewController1.swift in Sources */,
+				444397581FFE999B00AD5D55 /* DoneSurveyViewController.swift in Sources */,
 				44B7EE9D1FF9FB9B00D36D9F /* SurveyTypeView3.swift in Sources */,
+				447828351FFD24A60070B9A0 /* hashtag.swift in Sources */,
 				449B477A1FF93A8300F9524F /* SurveyTypeView2.swift in Sources */,
 				4486B8C71FFB8E110023BDB0 /* SurveyDoneView.swift in Sources */,
+				441A258E1FFFA5BD0038ADE2 /* MakeSurveyViewController2.swift in Sources */,
 				4486B8AC1FFB85080023BDB0 /* SurveyListTableViewCell.swift in Sources */,
+				4443975A1FFEB56900AD5D55 /* DoSurveyContainerViewController.swift in Sources */,
 				4486B8C31FFB8A7D0023BDB0 /* DoSurveyOptionTableViewCell.swift in Sources */,
+				44AAFE872000B18E0038275A /* MakeSurveyContainerViewController.swift in Sources */,
+				441A25901FFFB8E60038ADE2 /* MakeSurveyViewController3.swift in Sources */,
 				44A50AF01FFA7B0F00C1A098 /* SurveyTypeView1.swift in Sources */,
 				4486B8B01FFB86070023BDB0 /* DoSurveyViewController.swift in Sources */,
 				44A50B051FFA9F9400C1A098 /* SurveyType.swift in Sources */,
+				4443975E1FFECFE700AD5D55 /* PickerViewController.swift in Sources */,
 				446B339C1FF89903002B239A /* AppDelegate.swift in Sources */,
 				44C7620F1FFB9A3300834B51 /* ResultSurveyTypeView3.swift in Sources */,
 				44A50B011FFA99E800C1A098 /* SurveyOptionTableViewCell.swift in Sources */,
-				44A50AF81FFA7EE900C1A098 /* checklistBtn.swift in Sources */,
+				44A50AF81FFA7EE900C1A098 /* additionalfunc.swift in Sources */,
+				444397531FFE908C00AD5D55 /* SearchSurveyViewController.swift in Sources */,
 				44C762091FFB9A1800834B51 /* ResultSurveyTypeView2.swift in Sources */,
 				442BE26B1FFBAF59005EA1F2 /* DoSurveyTypeView2.swift in Sources */,
+				4443975C1FFEBA7300AD5D55 /* DoneSurveyContainerViewController.swift in Sources */,
 				4404CDE21FF92F2D0006D43A /* MakeSurveyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -682,11 +762,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CHN9U4QAUR;
 				INFOPLIST_FILE = QnD_storyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mycode7.QnD-storyboard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -696,11 +779,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CHN9U4QAUR;
 				INFOPLIST_FILE = QnD_storyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mycode7.QnD-storyboard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

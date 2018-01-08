@@ -9,88 +9,95 @@ import UIKit
 
 class MakeSurveyViewController: UIViewController {
     var selected = 0
-    let answerTypes = [0,1,2]
-    func test(){
-        self.dismiss(animated: true, completion: nil)
-    }
-    @IBAction func makeBtn(_ sender: Any) {        print(selected)//selected를 넘겨 줘야겠지
+    var childviewcontrollers = [UIViewController]()
+    
+    var bb1 = ToggleImageButton(); var bb2 = ToggleImageButton(); var bb3 = ToggleImageButton()
+    var btnset = Toggleset()
+    
+    @IBOutlet weak var titleField: UITextField!
+    @IBOutlet weak var subtitleField: UITextField!
+    
+    @IBOutlet weak var mainView: UIView!
+    
+    @IBOutlet weak var b1: UIButton!
+    @IBOutlet weak var b2: UIButton!
+    @IBOutlet weak var b3: UIButton!
+    @IBOutlet weak var makeBtn: UIBarButtonItem!
+    
+    @IBAction func b1(_ sender: Any) {
+        selected = 0; btnset.clicked(whichone: selected)
+       }
+    @IBAction func b2(_ sender: Any) {
+        selected = 1; btnset.clicked(whichone: selected)
+        
+       }
+    @IBAction func b3(_ sender: Any) {
+        selected = 2; btnset.clicked(whichone: selected)
+        
+        }
+    
+    @IBAction func makeBtn(_ sender: Any) {
         performSegue(withIdentifier: "toMoreMakeSurvey", sender: makeBtn)
     }
-    @IBOutlet weak var makeBtn: UIBarButtonItem!
-    @IBOutlet weak var answerTypePicker: UIPickerView!
-    @IBOutlet weak var subView: UIView!
-    
-    
-    @objc func getSwipeAction( _ recognizer : UISwipeGestureRecognizer){
-        if recognizer.direction == .right{
-            selected = ( selected + 1 ) % 3
-            chooseSurveyType()
-            print("Right Swiped")
-        } else if recognizer.direction == .left {
-            selected = ( selected - 1 ) % 3
-            chooseSurveyType()
-            print("Left Swiped")
-        }
-        
-    }
-    
-    
     
     override func viewDidLoad() {
+   
         super.viewDidLoad()
-        answerTypePicker.dataSource = self
-        answerTypePicker.delegate = self
-        subView.isUserInteractionEnabled = true
-        let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(getSwipeAction))
-        self.subView.addGestureRecognizer(swipeGesture)
-        chooseSurveyType()
-        // Do any additional setup after loading the view.
-    }
-
-    func setSideView(sideView: UIView){
-        sideView.frame = subView.frame
-        self.view.addSubview(sideView)
-    }
-
-}
-
-extension MakeSurveyViewController : UIPickerViewDelegate, UIPickerViewDataSource{
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+        
+        /* mainView 의 그림자 설정 */
+        dropShadow(v: mainView,color: .black, opacity: 0.2, offSet: CGSize(width: -1, height: 1), radius: 3, scale: true)
+        
+        /* button 설정 */
+        btnsetting()
+        
+        /* textfield 설정*/
+        textfieldsetting(t: titleField); textfieldsetting(t: subtitleField);
+        
+        /*
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        var vc1 = storyboard.instantiateViewController(withIdentifier: "MakeSurveyViewController1") as! MakeSurveyViewController1
+        var vc2 = storyboard.instantiateViewController(withIdentifier: "MakeSurveyViewController2") as! MakeSurveyViewController2
+        var vc3 = storyboard.instantiateViewController(withIdentifier: "MakeSurveyViewController3") as! MakeSurveyViewController3*/
+        //vc1.view.frame = containerView.frame
+        //containerView.addSubview(vc1.view)
     }
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return answerTypes.count
+    
+    func btnsetting(){
+        bb1.setToggleBtn(clickedImg: #imageLiteral(resourceName: "test2"), unclickedImg: #imageLiteral(resourceName: "test"), btn: b1, type: 0)
+        bb2.setToggleBtn(clickedImg: #imageLiteral(resourceName: "test2"), unclickedImg: #imageLiteral(resourceName: "test"), btn: b2, type: 1)
+        bb3.setToggleBtn(clickedImg: #imageLiteral(resourceName: "test2"), unclickedImg: #imageLiteral(resourceName: "test"), btn: b3, type: 2)
+        btnset.setset(b1: self.bb1, b2: self.bb2, b3: self.bb3)
     }
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selected =  answerTypes[pickerView.selectedRow(inComponent: 0)]
-        chooseSurveyType()
-    }
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return String(answerTypes[row])
+    func textfieldsetting(t: UITextField){
+        t.delegate = self
+        t.returnKeyType = .done
+        t.endEditing(true)
     }
     
-    func chooseSurveyType(){
+    func chooseSurveyType(selected :Int){
         switch selected {
         case 0 :
-            let sideView = SurveyTypeView1.instanceFromNib()
-            setSideView(sideView: sideView)
             break
         case 1 :
-            let sideView = SurveyTypeView2.instanceFromNib()
-            setSideView(sideView: sideView)
             break
         case 2 :
-            let sideView = SurveyTypeView3.instanceFromNib()
-            setSideView(sideView: sideView)
             break
         default:
             print("error has occured")
             break
         }
     }
+ 
 }
 
-
+extension MakeSurveyViewController : UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.subtitleField.endEditing(true)
+        self.titleField.endEditing(true)
+        return false
+    }
+}
 
 

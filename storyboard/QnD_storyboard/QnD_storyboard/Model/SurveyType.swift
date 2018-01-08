@@ -10,8 +10,8 @@ import Foundation
 struct SurveyType1 {
     var title : String = ""
     var detail : String = ""
-    var count : Int = 2
-    var options : [String] = ["", ""]
+    //var count : Int = 4
+    var options : [String] = ["", "","",""]
     //var basicinfo : surveybasicinfo
 }
 

@@ -14,7 +14,9 @@ class SurveyTypeView2: UIView {
     
     @IBOutlet weak var imageA: UIImageView!
     @IBOutlet weak var imageB: UIImageView!
-   
+    @IBOutlet weak var textA: UITextField!
+    @IBOutlet weak var textB: UITextField!
+    
     @IBAction func changeImageA(_ sender: Any) {
         AorB = 0
         alert()
@@ -27,6 +29,17 @@ class SurveyTypeView2: UIView {
     
     class func instanceFromNib() -> UIView {
         return UINib(nibName: "SurveyTypeView2", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
+    }
+    
+    override func layoutSubviews() {
+        textA.returnKeyType = .done
+        textA.delegate = self
+        self.textA.endEditing(true)
+        
+        textB.returnKeyType = .done
+        textB.delegate = self
+        self.textB.endEditing(true)
+        
     }
     
     func dismiss(){
@@ -58,18 +71,20 @@ class SurveyTypeView2: UIView {
 
 }
 
+
 extension SurveyTypeView2: UINavigationControllerDelegate, UIImagePickerControllerDelegate{
     
     //MARK: UIImagePickerDelegate Methods
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let originalImage = info[UIImagePickerControllerOriginalImage] as? UIImage{
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage{
+            
             if (AorB == 0){
-                imageA.image = originalImage
-                Type2.img1 = originalImage
+                imageA.image = image
+                Type2.img1 = image
             }
             else {
-                imageB.image = originalImage
-                Type2.img2 = originalImage
+                imageB.image = image
+                Type2.img2 = image
             }
             //self.profileImageView.image = originalImage
         }
@@ -82,6 +97,11 @@ extension SurveyTypeView2: UINavigationControllerDelegate, UIImagePickerControll
     
 }
 
-
-
-
+extension SurveyTypeView2 : UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.textA.endEditing(true)
+        self.textB.endEditing(true)
+        return false
+    }
+}

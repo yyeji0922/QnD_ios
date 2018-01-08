@@ -9,22 +9,51 @@ import UIKit
 
 class MakeMoreSurveyViewController: UIViewController {
     var nonameBtn = checklistBtn()
-    var lockBtn = checklistBtn()
     @IBOutlet weak var personnelField: UITextField!
-    @IBAction func personnelField(_ sender: Any) {
+    @IBOutlet weak var nonameSwitch: UISwitch!
+    @IBOutlet weak var ageSwitch: UISwitch!
+    @IBOutlet weak var sexSwitch: UISwitch!
+    @IBOutlet weak var durationBtn: UIButton!
+    @IBOutlet weak var ageBtn: UIButton!
+    
+    @IBAction func durationBtn(_ sender: Any) {
+        performSegue(withIdentifier: "toPickerView", sender: durationBtn)
+    }
+    @IBAction func ageBtn(_ sender: Any) {
+        performSegue(withIdentifier: "toPickerView", sender: ageBtn)
     }
     
-    var ageBtn = checklistBtn()
+    @IBOutlet weak var marriageSwitch: UISwitch!
+    @IBOutlet weak var jobSwitch: UISwitch!
+    @IBOutlet weak var scholarSwitch: UISwitch!
+    @IBOutlet weak var areaSwitch: UISwitch!
+    
+    @IBAction func submitBtn(_ sender: Any) {
+        var noname = nonameSwitch.state
+        var age = ageSwitch.state
+        var sex = ageSwitch.state
+        
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    var lockBtns = checklistBtn()
+    
+    var ageBtns = checklistBtn()
     /*var sexBtn = warnchecklistBtn()
     var marriageBtn = warnchecklistBtn()
     */
+    func DisableSwitch(sw : UISwitch){
+        sw.isOn = false
+        sw.isEnabled = false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //setBtn(button: nonameBtn)
-        //setBtn(button: lockBtn)
-        setBtn(button: ageBtn); ageBtn.opt = true
-        //setwarnBtn(button: sexBtn)
-        //setwarnBtn(button: marriageBtn)
+        DisableSwitch(sw: marriageSwitch);
+        DisableSwitch(sw: jobSwitch);
+        DisableSwitch(sw: scholarSwitch);
+        DisableSwitch(sw: areaSwitch);
+        personnelField.delegate = self
  
     }
     
@@ -62,4 +91,14 @@ class MakeMoreSurveyViewController: UIViewController {
     }
 
 
+}
+extension MakeMoreSurveyViewController : UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        let aSet = NSCharacterSet(charactersIn:"0123456789").inverted
+        let compSepByCharInSet = string.components(separatedBy: aSet)
+        let numberFiltered = compSepByCharInSet.joined(separator: "")
+        return string == numberFiltered
+    }
 }

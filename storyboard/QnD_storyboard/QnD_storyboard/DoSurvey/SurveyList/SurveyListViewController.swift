@@ -9,16 +9,18 @@ import UIKit
 
 class SurveyListViewController: UIViewController {
     var survey_list = ["1번 설문지","2번 설문지"]
+
     @IBOutlet weak var surveyListTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         surveyListTable.delegate = self
         surveyListTable.dataSource = self
-
+        surveyListTable.keyboardDismissMode = .interactive
+        surveyListTable.separatorStyle =  UITableViewCellSeparatorStyle.none
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -27,6 +29,7 @@ class SurveyListViewController: UIViewController {
 
 
 }
+
 extension SurveyListViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return survey_list.count
@@ -38,10 +41,7 @@ extension SurveyListViewController : UITableViewDelegate, UITableViewDataSource 
             tableView.register(UINib(nibName: "SurveyListTableViewCell", bundle: nil), forCellReuseIdentifier:"SurveyListTableViewCell")
             cell = tableView.dequeueReusableCell(withIdentifier: "SurveyListTableViewCell") as? SurveyListTableViewCell
         }
-        //cell.row = indexPath.row
-        //cell.numLabel?.text = "\(indexPath.row+1)."
-        //cell.optionField?.placeholder = "객관식\(indexPath.row+1)"
-        
+        cell.selectionStyle = .none// HIGHLIGHT 엊ㅅ애기
         return cell
     }
     

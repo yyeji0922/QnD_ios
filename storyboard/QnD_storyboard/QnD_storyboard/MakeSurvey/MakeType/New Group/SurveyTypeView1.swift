@@ -12,6 +12,7 @@ class SurveyTypeView1: UIView {
     //MARK :- checklist
     var multiplestate = false
     @IBOutlet weak var multipleselectionBtn: UIButton!
+    
     @IBAction func multipleselctionBtn(_ sender: Any) {
         if(multiplestate == false){
             self.multiplestate = true
@@ -26,12 +27,6 @@ class SurveyTypeView1: UIView {
     
     //MARK :- Table
     @IBOutlet weak var optionTable: UITableView!
-    @IBAction func addBtn(_ sender: Any) {
-        surveydata.count += 1
-        surveydata.options.append("")
-        optionTable.reloadData()
-    }
-    @IBOutlet weak var addBtn: UIButton!
     
     //MARK :- Load View
     class func instanceFromNib() -> UIView {
@@ -41,6 +36,10 @@ class SurveyTypeView1: UIView {
     override func layoutSubviews() {
         optionTable.delegate = self
         optionTable.dataSource = self
+        optionTable.isScrollEnabled = false;
+        optionTable.keyboardDismissMode = .interactive
+        optionTable.allowsSelection = false;
+        
         // you can update your label's text or etc.
     }
 
@@ -49,7 +48,7 @@ class SurveyTypeView1: UIView {
 extension SurveyTypeView1 : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return surveydata.count
+        return surveydata.options.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -59,11 +58,36 @@ extension SurveyTypeView1 : UITableViewDelegate, UITableViewDataSource{
             tableView.register(UINib(nibName: "SurveyOptionTableViewCell", bundle: nil), forCellReuseIdentifier:"SurveyOptionTableViewCell")
             cell = tableView.dequeueReusableCell(withIdentifier: "SurveyOptionTableViewCell") as? SurveyOptionTableViewCell
         }
+        cell.optionField.delegate = self
         cell.row = indexPath.row
-        cell.numLabel?.text = "\(indexPath.row+1)."
-        cell.optionField?.placeholder = "객관식\(indexPath.row+1)"
         
         return cell
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if(surveydata.options.count > 2){
+        surveydata.options.remove(at: indexPath.row)
+        let indexPathsForDelete = [indexPath]
+        optionTable.deleteRows(at: indexPathsForDelete, with:.automatic)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+            tableView.deleteRows(at: [indexPath as IndexPath], with: .fade)
+            // handle delete (by removing the data from your array and updating the tableview)
+        }
+    }
+}
+
+extension SurveyTypeView1 : UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.optionTable.endEditing(true)
+        return false
+    }
 }

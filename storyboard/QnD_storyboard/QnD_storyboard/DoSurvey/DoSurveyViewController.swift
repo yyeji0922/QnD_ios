@@ -8,28 +8,19 @@
 import UIKit
 
 class DoSurveyViewController: UIViewController {
-    var selected = 0
+    var selected = 2
+    var refreshControl: UIRefreshControl!
+    @IBOutlet weak var containerView: UIView!
     
-    @IBOutlet weak var subView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        if (selected < 3) {setSideView(sideView: subView)}
-        chooseSurveyType()
-    }
-
-    func setSideView(sideView: UIView){
-        sideView.frame = subView.frame
-        self.view.addSubview(sideView)
+        dropShadow(v: containerView, color: .black, opacity: 0.2, offSet: CGSize(width: -1, height: 1), radius: 3, scale: true)
         
     }
-
-    func setSideView2(sideView: UIView){
-        //sideView.frame = subView.frame
-        self.view.addSubview(sideView)
+    func haha(){
         
     }
-    
+    /*
     func chooseSurveyType(){
         switch selected {
         case 0:
@@ -65,4 +56,5 @@ class DoSurveyViewController: UIViewController {
             break
         }
     }
-}
+*/
+ }
